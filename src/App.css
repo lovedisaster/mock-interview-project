@@ -1,23 +1,18 @@
+.app {
+  padding-left: 15px;
+}
+
 .container {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 500px;
+  height: 500px;
   grid-gap: 10px;
 }
 
-.row {
-  border: 1px solid #eee;
-  padding: 0 15px;
-  border-radius: 10px;
-  height: 70px;
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 100px;
-}
-
-.row:nth-child(odd) {
+.container__post {
   background-color: #eee;
-  border-color: #000;
+  padding: 10px;
 }
 
-.row:nth-child(even) {
-  background-color: #fff;
-}

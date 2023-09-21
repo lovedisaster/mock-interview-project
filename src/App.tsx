@@ -1,16 +1,14 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import './App.css';
-import TodoList from './TodoList/TodoList';
-import ErrorBoundary from './utils/ErrorBoundary';
+import { Posts } from './posts/Posts';
 
 function App() {
   return (
-    <div className="App">
-      <ErrorBoundary>
-        <Suspense fallback={<>Loading ...</>}>
-          <TodoList/>
+    <div className="app">
+      <h1>Articles</h1>
+        <Suspense fallback={<>Loading...</>}>
+          <Posts/>
         </Suspense>
-      </ErrorBoundary>
     </div>
   );
 }
