@@ -3,7 +3,6 @@ import { fetchData, dataSource, Article } from "../api/fetchData"
 const resource = dataSource<Article[]>(fetchData());
 
 export const Posts = () => {
-
     const data = resource.read();      
     return <section className="container">
         {

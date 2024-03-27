@@ -15,14 +15,14 @@ class Report {
     }
 }
   
-class CSVFormat {
+class CSVFormat extends Report{
     generate(data) {
         // Logic to generate CSV report from data
         console.log('Generated report in CSV format');
     }
 }
 
-class JSONFormat {
+class JSONFormat extends Report{
     generate(data) {
         // Logic to generate JSON report from data
         console.log('Generated report in JSON format');
