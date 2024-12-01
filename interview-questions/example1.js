@@ -14,6 +14,3 @@ export const sequenceFunc = () => {
       console.log(message);
     });
 }
-
-
-

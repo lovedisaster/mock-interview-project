@@ -143,10 +143,8 @@ export const userProfile : UserProfile = {
   }
 
   function sortPropertiesByNearestExpiry(userProfile) : UserProfile {
-    // Function to parse date strings and return a Date object
     const parseDate = (dateString) => new Date(dateString);
   
-    // Function to find the nearest to expiry service for a property
     const findNearestExpiryService = (serviceResponses) => {
       return serviceResponses.reduce((earliest, current) => {
         const currentExpiry = parseDate(current.validTo);
@@ -154,12 +152,11 @@ export const userProfile : UserProfile = {
       }, new Date("2099-03-29T14:00:00.000Z")); // Use a far future date as initial value
     };
   
-    // Sort the properties array
     userProfile.properties.sort((a, b) => {
       const aNearestExpiry = findNearestExpiryService(a.serviceResponses);
       const bNearestExpiry = findNearestExpiryService(b.serviceResponses);
       return aNearestExpiry - bNearestExpiry; 
     });
   
-    return userProfile; // Return the sorted properties
+    return userProfile; 
   }

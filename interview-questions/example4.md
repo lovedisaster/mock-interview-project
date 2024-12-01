@@ -1,4 +1,4 @@
-The sample data has is called userProfile and one user could have one or multiple properties, and each property could have one ore many energy plans. 
+The sample data has is called userProfile and one user could have one or multiple properties, and each property could have one or many energy plans. 
 
 We want to sort the property by reading it's earliest to expriy plan. Please finish the function. 
 
